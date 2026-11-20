@@ -1,4 +1,9 @@
 {
+    "admin": {
+        "jobs": "Berufe", "gangs": "Gangs", "groups": "Berechtigte Gruppen",
+        "require_duty": "Dienststatus voraussetzen", "duty_required": "Nur im Dienst", "duty_optional": "Im oder außer Dienst",
+        "search_jobs": "Registrierte Berufe suchen...", "search_gangs": "Registrierte Gangs suchen...", "catalog_unavailable": "Der Gruppenkatalog des Frameworks ist nicht verfügbar oder leer."
+    },
     "join_notify_description": "Station beigetreten %.2f MHz",
     "invalid_notify_description": "Station %.2f MHz ist nicht verfügbar",
     "already_notify_description": "Du bist bereits der Station %.2f MHz beigetreten",

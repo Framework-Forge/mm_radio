@@ -116,14 +116,22 @@ RegisterNUICallback('updateRadioSize', function(data, cb)
 end)
 
 RegisterNUICallback('saveData', function(data, cb)
-    local player = Framework.core.getPlayerData()
-    local identifier = player.cid
-    if not identifier then return Radio:Notify(locale('unsuccess_name', channel)) end
-    Radio.userData[Radio.identifier].name = data.name
-    Radio:update()
-    TriggerServerEvent('mm_radio:server:addToRadioChannel', Radio.RadioChannel, data.name)
-    SetResourceKvp('radioSettings2', json.encode(Radio.userData))
-    cb(retreval)
+    local player = QBX.PlayerData or {}
+    local identifier = player.citizenid or player.cid
+    local name = type(data)=='table' and type(data.name)=='string' and data.name:match('^%s*(.-)%s*$')
+    if not Radio.playerLoaded or identifier~=Radio.identifier or not identifier
+        or not Radio.userData[identifier] or not name or #name==0 or #name>100 then
+        Radio:Notify(locale('unsuccess_name'))
+        return cb('error')
+    end
+    local ok=pcall(function()
+        Radio.userData[identifier].name=name
+        SetResourceKvp('radioSettings2',json.encode(Radio.userData))
+        if Radio.RadioChannel>0 then TriggerServerEvent('mm_radio:server:addToRadioChannel',Radio.RadioChannel,name) end
+        Radio:update()
+    end)
+    if not ok then Radio:Notify(locale('unsuccess_name')) end
+    cb(ok and 'ok' or 'error')
 end)
 
 RegisterNUICallback('getMutedList', function(_, cb)
@@ -131,7 +139,7 @@ RegisterNUICallback('getMutedList', function(_, cb)
 end)
 
 RegisterNUICallback('togglemutePlayer', function(data, cb)
-    if data == cache.serverId then
+    if data == pr_lib.cache.serverId then
         Radio:Notify(locale('failed_mute'))
         return cb(nil)
     end

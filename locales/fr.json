@@ -1,4 +1,9 @@
 {
+    "admin": {
+        "jobs": "Métiers", "gangs": "Gangs", "groups": "Groupes autorisés",
+        "require_duty": "Exiger d'être en service", "duty_required": "En service uniquement", "duty_optional": "En service ou hors service",
+        "search_jobs": "Rechercher les métiers enregistrés...", "search_gangs": "Rechercher les gangs enregistrés...", "catalog_unavailable": "Le catalogue des groupes du framework est indisponible ou vide."
+    },
     "join_notify_description": "Rejoint la station %.2f MHz",
     "invalid_notify_description": "La station %.2f MHz n'est pas disponible",
     "already_notify_description": "Vous avez déjà rejoint la station %.2f MHz",

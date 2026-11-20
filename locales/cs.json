@@ -1,4 +1,9 @@
 {
+    "admin": {
+        "jobs": "Zaměstnání", "gangs": "Gangy", "groups": "Povolené skupiny",
+        "require_duty": "Vyžadovat službu", "duty_required": "Pouze ve službě", "duty_optional": "Ve službě i mimo službu",
+        "search_jobs": "Hledat registrovaná zaměstnání...", "search_gangs": "Hledat registrované gangy...", "catalog_unavailable": "Katalog skupin frameworku není dostupný nebo je prázdný."
+    },
     "join_notify_description": "Připojeno k %.2f MHz",
     "invalid_notify_description": "%.2f MHz není k dispozici",
     "already_notify_description": "Již jste připojeni k %.2f MHz",

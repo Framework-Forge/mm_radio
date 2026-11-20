@@ -1,11 +1,9 @@
 Radio = {
 	identifier = nil,
 	playerServerID = GetPlayerServerId(PlayerId()),
-	playerLoaded = false,
 	PlayerJob = 'civilian',
 	PlayerGang = 'none',
 	PlayerDuty = false,
-	PlayerDead = false,
 	hasRadio = false,
 	onRadio = false,
 	usingRadio = false,
@@ -16,7 +14,7 @@ Radio = {
 	recomended = {},
 	street = "Unknown",
 	talkingList = {},
-	locale = lib.getLocales(),
+	locale = locale:getAll(),
 	jammer = {},
 	batteryData = {},
 	insideJammerZone = 0,
@@ -26,11 +24,23 @@ Radio = {
 	userData = json.decode(GetResourceKvpString('radioSettings2')) or {}
 }
 
+setmetatable(Radio, {
+    __index = function(_, key)
+        if key == 'playerLoaded' then return pr_lib.framework.IsPlayerLoaded() end
+        if key == 'PlayerDead' then return pr_lib.cache.get('mm_radio:dead', false) end
+    end,
+    __newindex = function(self, key, value)
+        if key == 'playerLoaded' then pr_lib.cache.set('mm_radio:loaded', value)
+        elseif key == 'PlayerDead' then pr_lib.cache.set('mm_radio:dead', value)
+        else rawset(self,key,value) end
+    end,
+})
+
 RegisterNetEvent('mm_radio:client:removedata', function()
 	DeleteResourceKvp('radioSettings2')
 	Radio.userData = {}
 	SetResourceKvp('radioSettings2', json.encode(Radio.userData))
-	if Framework.core.playerLoaded() then
+	if pr_lib.framework.IsPlayerLoaded() then
 		Radio:Init()
 	end
 end)

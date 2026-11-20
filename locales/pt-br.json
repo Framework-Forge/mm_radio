@@ -1,0 +1,36 @@
+{
+    "join_notify_description": "Conectado à estação %.2f MHz",
+    "invalid_notify_description": "A estação %.2f MHz não está disponível",
+    "already_notify_description": "Você já está conectado à estação %.2f MHz",
+    "restricted_notify_description": "Você não tem permissão para acessar a estação %.2f MHz",
+    "volume_notify_description": "Volume ajustado para %d%%",
+    "unsuccess_name": "Não foi possível alterar o nome",
+    "jammer_notify_description": "Não foi possível conectar à estação %.2f MHz",
+    "toggle_defean": "Áudio do rádio desativado",
+    "toggle_undeafen": "Áudio do rádio ativado",
+    "failed_mute": "Não foi possível silenciar o jogador",
+    "ui": {
+        "header": "NO RÁDIO", "frequency": "Frequência", "disconnect": "DESCONECTAR", "notconnected": "DESCONECTADO", "settings": "Configurações",
+        "channels": "Canais", "radio": "Rádio", "members": "Participantes", "favorites": "Favoritos", "recommended": "Recomendados", "clear": "LIMPAR",
+        "hide_overlay": "OCULTAR PAINEL", "show_overlay": "MOSTRAR PAINEL", "save": "SALVAR", "radio_settings": "Configurações do rádio", "move_radio": "Mover rádio",
+        "allow_move": "Permitir movimento", "overlay_settings": "Configurações do painel", "enableClicks": "Som do rádio"
+    },
+    "admin": {
+        "title": "Gerenciamento do rádio", "general": "Configurações gerais", "commands": "Ativar comandos do rádio", "debug": "Exibir zonas de depuração", "overlay": "Modo do painel",
+        "overlay_default": "Padrão", "overlay_always": "Sempre", "overlay_never": "Nunca", "max_frequency": "Frequência máxima", "radio_items": "Itens de rádio (separados por vírgula)",
+        "battery": "Bateria", "enabled": "Ativado", "consume": "Consumo por ciclo (%)", "depletion": "Intervalo do consumo (minutos)",
+        "restricted": "Canais restritos", "channel": "Canal", "group_type": "Tipo de permissão", "jobs": "Empregos", "gangs": "Gangues", "groups": "Grupos autorizados",
+        "require_duty": "Exigir que esteja em serviço", "duty_required": "Somente em serviço", "duty_optional": "Em serviço ou fora de serviço",
+        "search_jobs": "Buscar empregos cadastrados...", "search_gangs": "Buscar gangues cadastradas...", "catalog_unavailable": "O catálogo de grupos da framework está indisponível ou vazio.",
+        "add": "Adicionar", "edit": "Editar", "remove": "Remover", "names": "Nomes dos canais", "pattern": "Frequência ou padrão (exemplo: 1.%)", "name": "Nome exibido",
+        "jammer": "Bloqueadores de sinal", "jammer_options": "Configurações do jammer", "model": "Modelo do prop", "permissions": "Empregos/gangues autorizados (separados por vírgula)",
+        "min_range": "Alcance mínimo (m)", "max_range": "Alcance máximo (m)", "default_range": "Alcance padrão (m)", "step": "Passo de ajuste do alcance (m)", "range": "Alcance (m)",
+        "locations": "Locais dos jammers fixos", "location": "Local", "add_here": "Adicionar na posição atual", "current_position": "Usar minha posição e direção atuais", "damage": "Pode sofrer dano",
+        "allowed_channels": "Canais liberados (separados por vírgula)", "save": "Salvar alterações", "save_description": "Salva em JSON e aplica aos jogadores conectados.", "saved": "Configurações salvas.",
+        "forbidden": "Você não tem permissão para gerenciar o rádio.", "conflict": "Outro administrador alterou as configurações. Reabra o painel.", "invalid": "Configurações inválidas. Verifique alcances, frequências e listas de permissão.",
+        "invalid_model": "Este modelo de prop não está disponível.", "save_failed": "Não foi possível salvar as configurações."
+    },
+    "commands": { "radio": "Abrir rádio", "jammer": "Posicionar jammer", "recharge": "Recarregar bateria do rádio", "reset": "Redefinir preferências do rádio" },
+    "keybind": { "open": "Abrir rádio", "next": "Próximo canal do rádio", "previous": "Canal anterior do rádio" },
+    "jammer": { "permission": "Você não tem permissão para usar este item", "title": "Configuração do jammer", "prompt": "[E] Configurar jammer", "toggle": "Ligar/desligar jammer", "toggle_description": "Liga ou desliga este jammer. Estado atual: %s", "enabled": "Ativado", "disabled": "Desativado", "remove": "Remover jammer", "remove_description": "Remove este jammer", "range": "Alterar alcance do jammer", "range_description": "Altera o alcance deste jammer", "allowed": "Canais liberados", "allowed_description": "Configura os canais não afetados por este jammer", "channel": "Canal %s", "remove_channel": "Remover este canal da lista de liberados", "add_channel": "Adicionar canal", "add_channel_description": "Adiciona um canal liberado", "frequency": "Frequência do canal", "frequency_description": "Escolha a frequência do canal" }
+}

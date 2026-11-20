@@ -1,4 +1,22 @@
 {
+    "admin": {
+        "title": "Radio management", "general": "General settings", "commands": "Enable radio commands", "debug": "Debug zones", "overlay": "Overlay mode",
+        "overlay_default": "Default", "overlay_always": "Always", "overlay_never": "Never", "max_frequency": "Maximum frequency", "radio_items": "Radio items (comma separated)",
+        "battery": "Battery", "enabled": "Enabled", "consume": "Consumption per cycle (%)", "depletion": "Consumption interval (minutes)",
+        "restricted": "Restricted channels", "channel": "Channel", "group_type": "Permission type", "jobs": "Jobs", "gangs": "Gangs", "groups": "Allowed groups",
+        "require_duty": "Require on-duty status", "duty_required": "On duty only", "duty_optional": "On or off duty",
+        "search_jobs": "Search registered jobs...", "search_gangs": "Search registered gangs...", "catalog_unavailable": "The framework group catalog is unavailable or empty.",
+        "add": "Add", "edit": "Edit", "remove": "Remove", "names": "Channel names", "pattern": "Frequency or pattern (example: 1.%)", "name": "Display name",
+        "jammer": "Jammers", "jammer_options": "Jammer settings", "model": "Prop model", "permissions": "Allowed jobs/gangs (comma separated)",
+        "min_range": "Minimum range (m)", "max_range": "Maximum range (m)", "default_range": "Default range (m)", "step": "Range adjustment step (m)", "range": "Range (m)",
+        "locations": "Default jammer locations", "location": "Location", "add_here": "Add at current position", "current_position": "Use my current position and heading", "damage": "Can be damaged",
+        "allowed_channels": "Unblocked channels (comma separated)", "save": "Save changes", "save_description": "Persist settings in JSON and apply to connected players.", "saved": "Settings saved.",
+        "forbidden": "You are not authorized to manage the radio.", "conflict": "Another administrator changed the settings. Reopen the panel.", "invalid": "Invalid settings. Check ranges, frequencies and permission lists.",
+        "invalid_model": "This prop model is not available.", "save_failed": "Unable to save settings."
+    },
+    "commands": { "radio": "Open radio", "jammer": "Place a jammer", "recharge": "Recharge radio battery", "reset": "Reset radio preferences" },
+    "keybind": { "open": "Open radio", "next": "Next radio channel", "previous": "Previous radio channel" },
+    "jammer": { "permission": "You are not allowed to use this item", "title": "Jammer configuration", "prompt": "[E] Configure jammer", "toggle": "Toggle jammer", "toggle_description": "Turn this jammer on/off. Current state: %s", "enabled": "Enabled", "disabled": "Disabled", "remove": "Remove jammer", "remove_description": "Remove this jammer", "range": "Change jammer range", "range_description": "Change this jammer's range", "allowed": "Allowed channels", "allowed_description": "Configure channels unaffected by this jammer", "channel": "Channel %s", "remove_channel": "Remove this allowed channel", "add_channel": "Add channel", "add_channel_description": "Add an allowed channel", "frequency": "Channel frequency", "frequency_description": "Choose the channel frequency" },
     "join_notify_description": "Joined Station %.2f MHz",
     "invalid_notify_description": "Station %.2f MHz is not available",
     "already_notify_description": "You are already joined to Station %.2f MHz",

@@ -1,4 +1,9 @@
 {
+    "admin": {
+        "jobs": "Empleos", "gangs": "Bandas", "groups": "Grupos autorizados",
+        "require_duty": "Exigir estar de servicio", "duty_required": "Solo de servicio", "duty_optional": "De servicio o fuera de servicio",
+        "search_jobs": "Buscar empleos registrados...", "search_gangs": "Buscar bandas registradas...", "catalog_unavailable": "El catálogo de grupos del framework no está disponible o está vacío."
+    },
     "join_notify_description": "Estación unida %.2f MHz",
     "invalid_notify_description": "La estación %.2f MHz no está disponible",
     "already_notify_description": "Ya estás unido a la estación %.2f MHz",
